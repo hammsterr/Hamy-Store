@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ThemeOverlay.AppStore.ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="Widget.AppStore.ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="titleTextStyle">@style/TextAppearance.AppStore.ActionBarTitleTextStyle</item>
+        <item name="subtitleTextStyle">@style/TextAppearance.AppStore.ActionBarSubtitleTextStyle
+        </item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+        <!-- Другие настройки темы -->
+    </style>
+
+    <style name="TextAppearance.AppStore.ActionBarTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="TextAppearance.AppStore.ActionBarSubtitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="RoundedBgTextView" parent="@android:style/Widget.TextView">
+        <item name="roundedTextHorizontalPadding">1dp</item>
+        <item name="roundedTextVerticalPadding">1dp</item>
+        <item name="roundedTextDrawable">@drawable/rounded_text_bg</item>
+        <item name="roundedTextDrawableLeft">@drawable/rounded_text_bg_left</item>
+        <item name="roundedTextDrawableMid">@drawable/rounded_text_bg_mid</item>
+        <item name="roundedTextDrawableRight">@drawable/rounded_text_bg_right</item>
+    </style>
+
+    <style name="ChipButton" parent="Widget.AppCompat.Button.Small">
+        <item name="android:layout_height">@dimen/material_baseline_grid_4x</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/material_baseline_grid_1.5x</item>
+        <item name="android:paddingRight">@dimen/material_baseline_grid_1.5x</item>
+        <item name="android:background">@drawable/chip_background</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+</resources>

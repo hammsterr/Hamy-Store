@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1042545235899",
+    "project_id": "hamystore",
+    "storage_bucket": "hamystore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042545235899:android:e03716714753fcad9c169e",
+        "android_client_info": {
+          "package_name": "store.hamystudio.ru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042545235899-8mg5kq2lfqd67vqrsfab3shqhksdc42j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-x6wzWIi3zd4aIHLcHm6w1dQGUdJFJt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042545235899-8mg5kq2lfqd67vqrsfab3shqhksdc42j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

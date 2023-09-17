@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/material_baseline_grid_7.5x"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:clipChildren="false"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/material_baseline_grid_5x"
+        android:layout_height="@dimen/material_baseline_grid_5x"
+        android:layout_marginStart="@dimen/material_baseline_grid_2x"
+        android:layout_marginLeft="@dimen/material_baseline_grid_2x"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/favorite"
+        android:layout_width="@dimen/material_baseline_grid_1.5x"
+        android:layout_height="@dimen/material_baseline_grid_1.5x"
+        android:layout_marginStart="@dimen/material_baseline_grid_2x"
+        android:layout_marginLeft="@dimen/material_baseline_grid_2x"
+        android:src="@drawable/ic_stars_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        tools:ignore="ContentDescription" />
+
+    <store.hamystudio.ru.EmojiTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/material_baseline_grid_0.5x"
+        android:layout_marginLeft="@dimen/material_baseline_grid_0.5x"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/installed"
+        app:layout_constraintStart_toEndOf="@+id/favorite"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_goneMarginLeft="@dimen/material_baseline_grid_2x"
+        app:layout_goneMarginStart="@dimen/material_baseline_grid_2x"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/installed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/material_baseline_grid_2x"
+        android:layout_marginLeft="@dimen/material_baseline_grid_2x"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Installed • 1.2.3 • 2 min. ago" />
+</androidx.constraintlayout.widget.ConstraintLayout>

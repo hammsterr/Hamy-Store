@@ -1,0 +1,22 @@
+{
+  "database": {
+    "rules": "database/database-private.rules.json"
+  },
+  "storage": {
+    "rules": "storage/storage-private.rules"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "functions": {
+    "predeploy": [
+      "npm --prefix functions run lint"
+    ],
+    "source": "functions"
+  }
+}

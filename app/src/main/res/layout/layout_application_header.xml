@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/application_header_bg"
+    android:elevation="@dimen/material_elevation_app_bar"
+    android:paddingLeft="@dimen/material_baseline_grid_2x"
+    android:paddingTop="@dimen/material_baseline_grid_1x"
+    android:paddingRight="@dimen/material_baseline_grid_2x"
+    tools:ignore="UnusedAttribute"
+    tools:showIn="@layout/activity_versions">
+
+    <!-- Background will lead to overdraw but prevent ugly black fading transition of the header -->
+
+    <Space
+        android:id="@+id/space_responsive_width"
+        android:layout_width="@dimen/activity_responsive_width"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/header_icon"
+        android:layout_width="@dimen/material_baseline_grid_12x"
+        android:layout_height="@dimen/material_baseline_grid_12x"
+        app:layout_constraintStart_toStartOf="@id/space_responsive_width"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@mipmap/ic_launcher" />
+
+    <View
+        android:id="@+id/center_icon"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/header_icon"
+        app:layout_constraintEnd_toEndOf="@+id/header_icon"
+        app:layout_constraintStart_toStartOf="@+id/header_icon"
+        app:layout_constraintTop_toTopOf="@+id/header_icon" />
+
+    <store.hamystudio.ru.EmojiTextView
+        android:id="@+id/header_installedInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/material_baseline_grid_2x"
+        android:layout_marginLeft="@dimen/material_baseline_grid_2x"
+        android:layout_marginBottom="@dimen/material_baseline_grid_1x"
+        android:ellipsize="marquee"
+        android:maxLines="3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/header_description"
+        app:layout_constraintEnd_toEndOf="@id/space_responsive_width"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/header_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Installed\n1.2.3 (10203000) • 2 min. ago"
+        tools:visibility="visible" />
+
+    <store.hamystudio.ru.EmojiTextView
+        android:id="@+id/header_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/material_baseline_grid_2x"
+        android:layout_marginLeft="@dimen/material_baseline_grid_2x"
+        android:autoLink="all"
+        android:fadingEdgeLength="@dimen/material_baseline_grid_1x"
+        android:maxLines="6"
+        android:requiresFadingEdge="vertical"
+        android:scrollbars="vertical"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textIsSelectable="true"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/barrier_header"
+        app:layout_constraintEnd_toEndOf="@id/space_responsive_width"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/header_icon"
+        app:layout_constraintTop_toBottomOf="@+id/header_installedInfo"
+        tools:text="@tools:sample/lorem" />
+
+    <!--@tools:sample/lorem/random makes the editor bug...-->
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="header_icon,header_description"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/space_responsive_width"
+        app:layout_constraintStart_toStartOf="@id/space_responsive_width"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/material_baseline_grid_1x"
+        app:layout_constraintEnd_toEndOf="@id/space_responsive_width"
+        app:layout_constraintStart_toStartOf="@id/space_responsive_width"
+        app:layout_constraintTop_toBottomOf="@+id/barrier_header" />
+
+    <HorizontalScrollView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="@dimen/material_baseline_grid_1x"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/material_baseline_grid_1x"
+        android:requiresFadingEdge="horizontal"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="@+id/space_responsive_width"
+        app:layout_constraintStart_toStartOf="@+id/space_responsive_width"
+        app:layout_constraintTop_toBottomOf="@+id/space">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/transparent_divider_1x"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/design_fab_size_mini"
+            android:showDividers="middle"
+            tools:ignore="PrivateResource,RtlCompat">
+
+            <androidx.emoji.widget.EmojiButton
+                android:id="@+id/link1"
+                style="@style/ChipButton"
+                tools:text="LINK" />
+
+            <androidx.emoji.widget.EmojiButton
+                android:id="@+id/link2"
+                style="@style/ChipButton"
+                tools:text="LINK" />
+
+            <androidx.emoji.widget.EmojiButton
+                android:id="@+id/link3"
+                style="@style/ChipButton"
+                tools:text="LINK" />
+
+            <androidx.emoji.widget.EmojiButton
+                android:id="@+id/link4"
+                style="@style/ChipButton"
+                tools:text="LINK" />
+
+            <androidx.emoji.widget.EmojiButton
+                android:id="@+id/link5"
+                style="@style/ChipButton"
+                tools:text="LINK" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
