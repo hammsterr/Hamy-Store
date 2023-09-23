@@ -15,8 +15,8 @@ android {
     compileSdk = 33
     defaultConfig {
         applicationId = "store.hamystudio.ru"
-        minSdk = 19
-        targetSdk = 31
+        minSdk = 21
+        targetSdk = 33
         versionCode = versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName = "$versionMajor.$versionMinor.$versionPatch"
         multiDexEnabled = true
@@ -24,7 +24,13 @@ android {
     buildFeatures {
         buildConfig = true
         viewBinding = true
+        compose = true
     }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.3"
+    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = true
@@ -44,6 +50,8 @@ android {
 dependencies {
     testImplementation(libs.junit)
     testImplementation(kotlin("test"))
+    implementation("androidx.compose.material3:material3:1.1.1")
+    implementation("androidx.compose.material3:material3-window-size-class:1.1.1")
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.cardview)
     implementation(libs.androidx.emoji)

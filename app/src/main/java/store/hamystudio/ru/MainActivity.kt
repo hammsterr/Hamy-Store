@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val deeplinkUrl = "store.hamystudio.ru://hamystore.web.app/-NdL8LNMMBFvLmgGiTQA"
+        val deeplinkUrl = "https://hamystore.web.app/-NdL8LNMMBFvLmgGiTQA"
         val button = findViewById<Button>(R.id.homeCheckUpdates)
         button.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)

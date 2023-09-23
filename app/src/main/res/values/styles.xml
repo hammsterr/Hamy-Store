@@ -5,21 +5,20 @@
         <item name="colorControlNormal">@color/colorAccent</item>
     </style>
 
-    <style name="Widget.AppStore.ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
-        <item name="titleTextStyle">@style/TextAppearance.AppStore.ActionBarTitleTextStyle</item>
-        <item name="subtitleTextStyle">@style/TextAppearance.AppStore.ActionBarSubtitleTextStyle
-        </item>
+    <style name="Widget.AppStore.ActionBarStyle" parent="@style/Widget.Material3.ActionBar.Solid">
+        <item name="titleTextStyle">@style/TextAppearance.Material3.ActionBar.Title</item>
+        <item name="subtitleTextStyle">@style/TextAppearance.Material3.ActionBar.Subtitle</item>
     </style>
 
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight">
+    <style name="AppTheme" parent="Theme.Material3.DayNight">
         <!-- Другие настройки темы -->
     </style>
 
-    <style name="TextAppearance.AppStore.ActionBarTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+    <style name="TextAppearance.AppStore.ActionBarTitleTextStyle" parent="@style/TextAppearance.Material3.ActionBar.Title">
         <item name="android:textColor">@color/colorAccent</item>
     </style>
 
-    <style name="TextAppearance.AppStore.ActionBarSubtitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+    <style name="TextAppearance.AppStore.ActionBarSubtitleTextStyle" parent="@style/TextAppearance.Material3.ActionBar.Subtitle">
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textSize">14sp</item>
     </style>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.AppStore" parent="Base.Theme.AppStore" />
+    <style name="Theme.AppStore" parent="Theme.Material3.DayNight" />
 
-    <style name="Theme.AppStore.Preview" parent="Base.Theme.AppStore.Preview" />
+    <style name="Theme.AppStore.Preview" parent="Theme.Material3.DayNight" />
 
 </resources>
