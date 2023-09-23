@@ -16,9 +16,9 @@ AppStore.CONFIG = {
       }
     ]
   },
-  apkMaxSize: 100 * 1024 * 1024 /* 100 MiB */,
+  apkMaxSize: 200 * 1024 * 1024 /* 200 MiB */,
   apkMimeType: "application/vnd.android.package-archive",
-  imageMaxSize: 2 * 1024 * 1024 /* 2 MiB */,
+  imageMaxSize: 25 * 1024 * 1024 /* 25 MiB */,
   imageMimeType: "image/*"
 };
 
